@@ -941,7 +941,7 @@ exports.default = {
   compare: function compare(x, y) {
     function cook(d) {
       if (typeof d === 'undefined' || d === null) return '';
-      return d.toLowerCase();
+      return typeof d != "string" ? "" : d.toLowerCase();
     }
     x = cook(x);
     y = cook(y);
